@@ -25,12 +25,13 @@ git push -u mask main (-u : upstream set {make a same state})
 
 ### commit convention
 
+```
 *blob의 단위는 동작하는단위
 
 50자내외
 제목과 내용사이 한 칸
 
-prefix
+commit prefix convention
 
 feat (features:기능개발)
 docs (documentations:문서형식)
@@ -41,3 +42,4 @@ refactor (refactoring:코드개선)
 ci (Continuous Intergration :코드자동화)
 build (부산물)
 perf (퍼포먼스)
+```
