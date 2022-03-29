@@ -1,13 +1,13 @@
-github
+## github
 
-## top -> bottom
+### top -> bottom
 ```
 github -> repo create
 git clone
 git push
 ```
 
-## bottom -> top
+### bottom -> top
 ```
 create repo at local (gitbash)
 $ mkdir {repo name}
