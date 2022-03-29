@@ -26,10 +26,10 @@ git push -u mask main (-u : upstream set {make a same state})
 ### commit convention
 
 ```
-*blob의 단위는 동작하는단위
+*A blob unit is created as a unit of operation.
 
-50자내외
-제목과 내용사이 한 칸
+Write about 50 characters
+Put a space between the title and the content.
 
 commit prefix convention
 
