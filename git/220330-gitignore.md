@@ -21,7 +21,8 @@ key.pem
 ```
 
 생성후 .gitignore 복사붙여넣기
-[https://www.toptal.com/developers/gitignore](https://www.toptal.com/developers/gitignore)
+[https://www.toptal.com/developers/gitignore]
+(https://www.toptal.com/developers/gitignore)
 os (ex: macOS, window)
 editor (ex: Vim, vscode)
 framework (ex: react, java)
