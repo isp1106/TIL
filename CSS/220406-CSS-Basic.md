@@ -11,7 +11,7 @@ span {font-size: 50px;}
 -내장방식 : <style><style>의 내용으로 작성
 -인라인방식: 요소의 style속성에 직접 작성 ex)<div style="color:red;"></div>
 -import방식 : @import 규칙으로 CSS 문서안에서 또 다른 문서를 가져와 연결
-             EX) @import url("./box.css");
+             ex) @import url("./box.css");
 ```
 
 ## CSS 선택자
@@ -24,9 +24,9 @@ span {font-size: 50px;}
 - 가상 : :hover, :active, :focus, first-child, last-child, nth-child(n), :not
 - 가상요소 : ::before, ::after (가상요소 만들어 삽입, content:''; & add css)
 - 속성 : ex): <input type="text" value="1234" disabled>
-		 	 [disabled] { color: red;}
-        	 <span data-fruit-name="apple">사과</span>
-			 [data-fruit-name] {color: red;}
+	      [disabled] { color: red;}
+	      <span data-fruit-name="apple">사과</span>
+	      [data-fruit-name] {color: red;}
              
 [선택자 우선순위]
 - 인라인 선언 > id선택자(#) > class선택자(.), 태그선택자(div), 전체선택자(*) 
@@ -50,5 +50,4 @@ span {font-size: 50px;}
 - position : 배치 (static/relative/absolute/fixed, top/right/bottom/left)
 - z-index : 요소의 쌓임 (숫자가 높을 수록 위에 쌓임)
 ```
-
 
