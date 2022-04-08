@@ -15,9 +15,8 @@
 - Array
 
 ### string (문자 데이터)
-```따옴표를 사용
-
-<script>
+```
+따옴표를 사용
 let myName = 'inseok';
 let email = 'dlstjr1106@gmail.com';
 let hello = `Hello ${myName}?!`; --> 백틱으로 보간법 사용 `${변수};`
@@ -25,7 +24,6 @@ let hello = `Hello ${myName}?!`; --> 백틱으로 보간법 사용 `${변수};`
 console.log(myName); // HEROPY
 console.log(email); // dlstjr1106@gmail.com
 console.log(hello); // Hello inseok?!
-</script>
 ```
 ### Number (숫자 데이터)
 ```
