@@ -58,7 +58,7 @@ console.log(obj.abc); // 123
 console.log(obj.xyz); // 객체(object)에 없는 value ->  undefined
 ```
 ### Null
-```
+```javascript
 어떤 값이 의도적으로 비어있음을 의미.
 
 let empty = null;
