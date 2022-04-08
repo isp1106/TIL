@@ -1,11 +1,11 @@
 ## 기본문법, 주석
-```
+```css
 span {font-size: 50px;}
 - 선택자(selector), {속성(css) : 값(value);}
 ```
 ## CSS 선언방식
 
-```
+```css
 [내장방식, 링크방식, 인라인방식, @import방식]
 
 -내장방식 : <style><style>의 내용으로 작성
@@ -15,7 +15,7 @@ span {font-size: 50px;}
 ```
 
 ## CSS 선택자
-```
+```css
 [기본, 복합, 가상 클래스, 가상 요소, 속성]
 - 기본 : 전체선택자 (*), 태그선택자 (ex: li, span, div), 클래스 선택자 (ex: .orange)
 - 복합 : 일치선택자 (동시만족 ex: span.orange), 자식선택자 (ex: ul > li), 
@@ -33,7 +33,7 @@ span {font-size: 50px;}
 ```
 
 ## CSS 대표속성
-```
+```css
 - CSS 단위 (px, em, rem, %, vw, vh)
 - width/height : 가로/세로 너비 (max/min)
 - margin : 외부여백
