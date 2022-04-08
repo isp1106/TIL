@@ -15,7 +15,8 @@
 - Array
 
 ### string (문자 데이터)
-```
+```javascript
+
 따옴표를 사용
 let myName = 'inseok';
 let email = 'dlstjr1106@gmail.com';
