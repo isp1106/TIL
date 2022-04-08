@@ -28,25 +28,25 @@ ease/linear/ease-in/ease-out/ease-in-out/cubic-bezier(n,n,n,n),steps(n)
 ```css
 - translate(x,y)
 - scale()
--rotate(degree)
--skew(x,y)
--matrix(n,n,n,n,n)
+- rotate(degree)
+- skew(x,y)
+- matrix(n,n,n,n,n)
 ```
 - 3D 변환 함수
 ```css
-translateZ(z)
-translate3d(x,y,z)
-scaleZ(z)
-scale3d(x,y,z)
-rotateX(x)
-rotateY(y)
-rotateZ(z)
-rotate3d(x,y,z,a)
-perspective(n)
-matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)
+- translateZ(z)
+- translate3d(x,y,z)
+- scaleZ(z)
+- scale3d(x,y,z)
+- rotateX(x)
+- rotateY(y)
+- rotateZ(z)
+- rotate3d(x,y,z,a)
+- perspective(n)
+- matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)
 ```
 - backface-visibility
 ```css
-hidden/visibility
+hidden / visibility
 3d 요소 뒷면 숨김 or 보임
 ```
