@@ -15,8 +15,7 @@
 - Array
 
 ### string (문자 데이터)
-```
-따옴표를 사용
+```따옴표를 사용
 
 <script>
 let myName = 'inseok';
