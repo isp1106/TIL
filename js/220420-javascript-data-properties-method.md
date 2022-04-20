@@ -77,7 +77,7 @@ function random(){
 console.log(random()) // 0~9까지의 정수 임의 출력
 ```
 
-## **Array(배열)**
+## **Array**
 ---
 ```js
 const numbers = [1, 2, 3, 4]
@@ -120,18 +120,19 @@ const a = fruits.forEach(function (fruit, i){
 })
 console.log(a) //Apple-0 Banana-1 Cherry-2 undefined
 
-// Map
+// map() 
+// Return Object
+// map() 메서드는 배열 내의 모든 요소 각각에 대하여 주어진 함수를 호출한 결과를 모아
+// 새로운 배열을 반환합니다.
 const b = fruits.map(function (fruit, i){
   return `${fruit}-${i}`
 })
 console.log(b) // ['Apple-0', 'Banana-1', 'Cherry-2']
 
-// Map (Return Object)
 const numbers =  [1, 2, 3, 4]
 const fruits = ['Apple', 'Banana', 'Cherry']
 
 //forEach
-
 const a = fruits.forEach(function (fruit, i){
   console.log(`${fruit}-${i}`)
 })
@@ -166,4 +167,95 @@ const b = fruits.map((fruit, i) => ({
   name: fruit
 }))
 console.log(b) //결과 값은 같다.
+
+.filter()
+// filter() 는 주어진 함수의 테스트를 통과하는 모든 요소를 모아 새로운 배열로 반환합니다.
+// 아래 동일한 로직에서 map()과 filter()의 차이를 확인
+
+// map()
+const numbers = [1, 2, 3, 4]
+const fruits = ['Apple', 'Banana', 'Cherry']
+
+const a = numbers.map(number => {
+  return number < 3
+})
+// 위 코드는 하나의 실행문만 반환하고 있으므로 아래의 형태로 축약가능하다.
+const a = numbers.map(number => number < 3)
+console.log(a) //true true false false 
+//3보다 작은 1, 2, 두개가 true 나머지는 false를 출력한다.
+
+// filter()
+const b = numbers.filter(number => number < 3)
+console.log(b) //[1, 2] 
+//3보다 작은 1, 2가 true이므로 1, 2를 출력한다.
+
+.find()  .findIndex()
+const numbers = [1, 2, 3, 4]
+const fruits = ['Apple', 'Banana', 'Cherry']
+
+.find()
+// 조건에 맞는 특정한 아이템을 찾을 때 
+const a = fruits.find(fruit => /^B/.test(fruit))
+console.log(a) //Banana
+// /^B/ 대문자 B로 시작하는 item(Banana)을 추출하기 위한 정규표현식
+
+.findIndex()
+// 특정한 아이템이 몇번째에 있는지 찾을 때
+const b = fruits.findIndex(fruit => /^B/.test(fruit))
+console.log(b) // 1
+// B로 시작하는 item Banana는 zero-base 기준 1번째이므로 1출력
+
+.includes()
+//인수로 사용되는 특정한 데이터가 배열에 들어있는지 확인할 때
+const a = numbers.includes(3)
+console.log(a) //true
+// numbers 배열에 3이 포함이 되어있으므로 true
+const b = fruits.includes('Heropy')
+console.log(b) // false
+// fruits 배열에 'Heropy'는 없으므로 false
+
+.push() .unshift()
+// 배열의 원본이 수정됨 주의!
+
+.push()
+// 배열의 맨 끝에 아이템을 삽입해주는 메소드
+numbers.push(5)
+console.log(numbers) // [1, 2, 3, 4, 5]
+// 배열의 맨 끝에 5가 추가됨
+
+.unshift()
+// 배열의 맨 앞에 아이템을 삽입해주는 메소드
+numbers.unshift(0)
+console.log(numbers) // [0, 1, 2, 3, 4]
+// 배열의 맨 앞에 0이 추가됨
+
+.reverse()
+// 배열을 역순으로 출력
+// 배열의 원본이 수정됨 주의!
+numbers.reverse() 
+fruits.reverse()
+console.log(numbers) // [4, 3, 2, 1]
+console.log(fruits) // ['Cherry', 'Banana', 'Apple']
+
+.splice(n, n)
+// n번째 item부터 n개 지워준다
+// 배열item을 추가하는 목적으로도 사용한다.
+// 배열의 원본이 수정됨 주의!
+numbers.spice(2, 1) // [1, 2, 3, 4]에서 2번째 item 3부터 1개 지움
+console.log(numbers) // [1, 2, 4]
+
+numbers.spice(2, 2) // 2번째 item 3부터 2개 지움
+console.log(numbers) // [1, 2]
+
+numbers.spice(2, 0) // 2번째 item 3부터 0개 지움 (지울 item 없음)
+console.log(numbers) // [1, 2, 3, 4] 
+
+numbers.spice(2, 0, 999) // 2번째 item 3부터 0개를 지우고 999를 생성
+console.log(numbers) // [1, 2, 999, 3, 4] 
+
+numbers.spice(2, 1, 999) // 2번째 item 3부터 1개를 지우고 그 자리에 999를 생성
+console.log(numbers) // [1, 2, 999, 4]
+
+numbers.fruits(2, 0, 'Orange') // 2번째인 Cherry 앞에 Orange를 생성
+console.log(numbers) //  ['Apple', 'Banana', 'Orange', 'Cherry']
 ```
