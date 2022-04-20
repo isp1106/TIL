@@ -80,9 +80,9 @@ const funcName = (param1, param2) => {};
 // 함수 바디가 한 줄인 경우(single-line block)
 const squareNum = num => num * num
 // 함수 바디가 여러 줄인 경우(single-line block)
-const squareNum = num =>{
-	const square = num * num
-    return square;
+const squareNum = num => {
+  const square = num * num
+  return square;
 }
 
 // ex)
