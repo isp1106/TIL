@@ -65,4 +65,36 @@ console.log(hisName); // HEROPY
 //혹은
 
 console.log(heropy.getName()); /// HEROPY
+```
+- 화살표 함수
+```javascript
+// 화살표 함수
+// () => {}  vs function() {}
 
+// 파라미터가 없는 경우
+const funcName = () => {};
+// 파라미터가 하나인 경우
+const funcName = param1 => {};
+// 파라미터가 둘 이상인 경우
+const funcName = (param1, param2) => {};
+// 함수 바디가 한 줄인 경우(single-line block)
+const squareNum = num => num * num
+// 함수 바디가 여러 줄인 경우(single-line block)
+const squareNum = num =>{
+	const square = num * num
+    return square;
+}
+
+// ex)
+const double = function (x) {
+  return x * 2
+}
+console.log('double: ', double(7)); // double: 14
+
+const doubleArrow = x => x * 2
+console.log('doubleArrow:', doubleArrow(7)); //doubleArrow: 14
+
+// 화살표 함수 객체 (소괄호로 감싼 후 중괄호)
+const doubleArrow2 = x => ({name: 'Heropy'})
+console.log(doubleArrow2()); // {name: 'Heropy'}
+```
