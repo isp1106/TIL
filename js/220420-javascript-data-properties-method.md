@@ -259,3 +259,82 @@ console.log(numbers) // [1, 2, 999, 4]
 numbers.fruits(2, 0, 'Orange') // 2번째인 Cherry 앞에 Orange를 생성
 console.log(numbers) //  ['Apple', 'Banana', 'Orange', 'Cherry']
 ```
+
+## **Object**
+---
+```js
+Object.assign(taget, ...sources)
+// Object.assign() 메서드는 출처 객체들의 모든 열거 가능한 자체 속성을 복사해
+// 대상 객체에 붙여넣습니다. 그 후 대상 객체를 반환합니다.
+
+const userAge = {
+  //key: value
+  name: 'Heropy',
+  age: '85'
+}
+
+const userEmail = {
+  //key: value
+  name: 'Heropy',
+  email: 'thesecon@gmail.com'
+}
+
+const target = Object.assign(userAge, userEmail) 
+// target(대상): userAge, source(출처): userEmail
+console.log(target) // {name: 'Heropy', age: '85', email: 'thesecon@gmail.com'}
+console.log(userAge) // {name: 'Heropy', age: '85', email: 'thesecon@gmail.com'}
+console.log(target === userAge) // true
+
+// {}, [], function은 참조형 데이터이다.
+// 메모리상에서 target인 userAge와 변수 target은 같은 곳을 참조하고 있기 때문에
+// 일치연산자로 비교를 해도 true를 출력한다.
+
+// 반면,
+
+const a = { k: 123 }
+const b = { k: 123 }
+console.log(a === b) // false
+// a와 b는 같은 로직의 객체이지만 각각 참조하는 변수가 다르므로
+// 일치연산자로 비교시 false를 출력한다.
+
+// 새로운 객체데이터를 사용하려면 
+const target = Object.assign({}, userAge, userEmail)
+// 위 처럼 target객체를 {}로 설정하고 source 객체에 각각의 배열을 넣어주면
+// 원본에 영향이 없는 새로운 객체를 생성 할 수 있다.
+console.log(target) // {name: 'Heropy', age: '85', email: 'thesecon@gmail.com'}
+console.log(userAge) // {name: 'Heropy', age: '85'}
+console.log(target === userAge) // false
+// target은 더 이상 userAge와 같은 곳을 참조하지 않기 때문에 fasle를 출력한다.
+
+// 하나의 객체데이터를 복사하는 용도로 assgin()을 사용할 수도 있다.
+const target = Object.assign({}, userAge)
+console.log(target) // {name: 'Heropy', age: '85'}
+console.log(target === userAge) // false
+// userAge와 같은 객체를 {}로 새로 복사한 것이며, 
+// 복사한 배열은 userAge와 같은 곳을 참조하지 않기 때문에 false를 출력한다.
+
+Object.keys()
+// 객체의 key값을 반환
+
+const user = {
+  // key: value
+  name: 'Heropy',
+  age: '85',
+  email: 'thesecon@gmail.com'
+}
+
+const keys = Object.keys(user)
+console.log(keys) // ['name', 'age', 'email']
+// user 객체의 key값을 반환
+
+// email의 value 추출에는 2가지 표현이 가능
+console.log(user.email) // thesecon@gmail.com
+console.log(user['email']) // thesecon@gmail.com 
+
+const values = keys.map(key => user[key]) 
+//map()으로 배열 item갯수만큼 3번 받기 (콜백함수 3번실행)
+
+console.log(values) // ['Heropy', '85', 'thesecon@gmail.com']
+// 값(value)들만 가진 배열데이터를 생성
+
+```
