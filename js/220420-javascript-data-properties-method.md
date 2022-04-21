@@ -12,7 +12,7 @@
 ---
 ```js
 const result = 'Hello world!'.indexOf('world')
-console.log(result) // 6 (글자 6번째의 w부터 출력하므로 world)
+console.log(result) // 6 (글자 6번째는 world, w부터 출력하므로 6)
 
 const result = 'Hello world!'.indexOf('Heropy')
 console.log(result) // -1 (문자를 찾을수 없을 때 -1 출력)
