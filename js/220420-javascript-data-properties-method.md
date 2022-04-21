@@ -31,8 +31,9 @@ console.log(str.replace(' world', '')) //Hello
 // replace('', ''): 대상 문자열을 변환시킴
 // 공백으로 두면 문자가 삭제된다.
 
-console.log(str.trim()) //Helloworld 
-// trim(): 모든 공백문자를 제거함
+const str = 'Hello world       '
+console.log(str.trim()) // Hello world 
+// trim(): 문자열 양끝의 공백문자를 제거함
 
 ```
 ## **Number**
