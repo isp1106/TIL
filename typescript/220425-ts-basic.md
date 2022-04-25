@@ -6,24 +6,24 @@
 - `null`
 - `undefined`
 
-> 오브젝트와 레퍼런스 형태가 아닌 실제 값을 저장하는 자료형
+오브젝트와 레퍼런스 형태가 아닌 실제 값을 저장하는 자료형
  프리미티브형의 내장 함수를 사용 가능한것은 자바스크립트 처리 방식 덕분
  
- > literal 값으로 Primitive 타입의 서브 타입을 나타낼 수 있다. 
+ literal 값으로 Primitive 타입의 서브 타입을 나타낼 수 있다. 
 `true`
 ``` 'hello' ```
 `3.14`
 `null`
 `undefinded`
 
-> - 또는 래퍼 객체로 만들수있다.
+또는 래퍼 객체로 만들수있다.
 ```js
 new Boolan(fasle) // type of new Boolean(false) : 'object'
 new String('world') // type of new Boolean('world') : 'object'
 new Number(42) // type of new Boolean(42) : 'object'
 ```
 
-> TypeScript의 핵심 primitive types 은 모두 소문자.
+TypeScript의 핵심 primitive types 은 모두 소문자.
 ```js
 // ex
 function reverse (s: string): string{
